@@ -1,0 +1,118 @@
+html{
+    font-size:62.5%; /* 16px *62.5 = 10px =1rem */
+    box-sizing: border-box;
+}
+
+body{
+    margin:0px;
+    height:100vh;
+    font-size: 1.6rem;
+    font-family: helvetica, Arial, sans-serif;
+}    
+
+/*global*/
+a{
+    text-decoration: none;
+    color:#ffffff;
+    
+}
+a:hover{
+    color:#ff8000;
+}
+h1{
+    font-size: 1.8rem;
+    padding: 1rem 0;
+}
+h2{
+    font-size: 1.6rem;
+    padding: 1rem 0;
+}
+/* layout design*/
+.grid-container{
+    display: grid;
+    grid-template-areas:
+    'header'
+    'main'
+    'footer';
+    grid-template-columns: 1fr;
+    grid-template-rows: 5rem 1fr 5rem;
+    height:100%;
+}
+/*header design*/
+header{
+    grid-area:header;
+    background-color: #203040;
+}
+header a{
+    padding:1rem;
+}
+a.brand{
+    color:#ffffff;
+    font-size:2.5rem;
+    font-weight:600;
+}
+
+.row{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between ;
+    align-items: center;
+}
+.row.center {
+    justify-content: center;
+    
+}
+
+
+main{
+    grid-area:main;
+    padding:1rem;
+}
+img{
+    border-radius:0.5rem;
+}
+img.medium{
+    max-width: 29rem;
+    width: 100%;
+}
+/* card*/
+
+.card{
+    border: 0.1rem #c0c0c0 solid;
+    background-color: #f8f8f8;
+    margin: 1rem;
+    
+}
+.card a{
+    color:#000;
+}
+.card a:hover{
+    color:#ff8000;
+}
+
+.card-body{
+    padding: 1rem;
+}
+.card-body >*{
+    margin-bottom: 0.5rem;
+}
+.product-name{
+    font-weight: bold;
+}
+.rating span{
+    color:#f0c040;
+    margin:0.1rem;
+}
+.price{
+    font-size: 2rem;
+}
+
+
+
+footer{
+    grid-area:footer;
+    background-color: #203050;
+    color:#ffffff;
+}
+
+
