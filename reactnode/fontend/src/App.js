@@ -1,5 +1,6 @@
 
 import './App.css';
+import Product from './components/Products';
 import data from './data';
 
 function App() {
@@ -37,31 +38,7 @@ function App() {
                   data.products.map((product)=>(
 
 
-                    <div key={product._id} className="card">
-                    
-                      <a href={`/product/${product._id}`}>
-                        <img className="medium" src={product.image} alt ={product.name}></img>
-                      </a>
-                      <div className="card-body">
-                        <div className="product-name">
-                          <a href={`/product/${product._id}`}>
-                              <h2 >
-                                {product.name}
-                              </h2>
-                          </a>
-                        </div>
-                        <div className="rating">
-                            <span><i className="fa fa-star"></i></span>
-                            <span><i className="fa fa-star"></i></span>
-                            <span><i className="fa fa-star"></i></span>
-                            <span><i className="fa fa-star"></i></span>
-                            <span><i className="fa fa-star"></i></span>
-                        </div>
-                        <div className="price">
-                            Price: {product.price}
-                        </div>
-                    </div>
-                  </div>
+                    <Product key={product._id} product={product}></Product>
 
                   ))
                 }

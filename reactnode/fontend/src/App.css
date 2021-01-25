@@ -132,5 +132,7 @@ footer{
   background-color: #203050;
   color:#ffffff;
 }
-
+.rating span:last-child{
+  color:#404040; 
+}
 

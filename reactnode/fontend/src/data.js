@@ -7,7 +7,7 @@ const data = {
             price: 60,
             brand: 'local',
             rating:4.5,
-            numReview:10,          
+            numReviews:10,          
             description: 'hyginic vegitable.'
 
         },
@@ -17,8 +17,8 @@ const data = {
             image:'./images/apple.jpg',
             price: 60,
             brand: 'local',
-            rating:4.5,
-            numReview:10,          
+            rating:1.5,
+            numReviews:10,          
             description: 'hyginic vegitable.'
 
         },
@@ -28,8 +28,8 @@ const data = {
             image:'./images/cauliflower.jpg',
             price: 60,
             brand: 'local',
-            rating:4.5,
-            numReview:10,          
+            rating:2.5,
+            numReviews:10,          
             description: 'hyginic vegitable.'
 
         },
@@ -40,7 +40,7 @@ const data = {
             price: 60,
             brand: 'local',
             rating:4.5,
-            numReview:10,          
+            numReviews:10,          
             description: 'hyginic vegitable.'
 
         },
@@ -50,8 +50,8 @@ const data = {
             image:'./images/tomato.jpg',
             price: 60,
             brand: 'local',
-            rating:4.5,
-            numReview:10,          
+            rating:5,
+            numReviews:10,          
             description: 'hyginic vegitable.'
 
         },
@@ -62,7 +62,7 @@ const data = {
             price: 60,
             brand: 'local',
             rating:4.5,
-            numReview:10,          
+            numReviews:10,          
             description: 'hyginic vegitable.'
 
         },
