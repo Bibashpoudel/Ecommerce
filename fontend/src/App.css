@@ -1,0 +1,162 @@
+html{
+  font-size:62.5%; /* 16px *62.5 = 10px =1rem */
+  box-sizing: border-box;
+}
+
+body{
+  margin:0px;
+  height:100%;
+  font-size: 1.6rem;
+  font-family: helvetica, Arial, sans-serif;
+}    
+
+/*global*/
+a{
+  text-decoration: none;
+  color:#ffffff;
+  
+}
+a:hover{
+  color:#ff8000;
+}
+ul {
+  padding:0;
+  margin:0;
+  list-style-type:none ;
+}
+li{
+  margin-top: 1rem 
+}
+h1{
+  font-size: 1.8rem;
+  padding: 1rem 0;
+}
+h2{
+  font-size: 1.6rem;
+  padding: 1rem 0;
+}
+/* layout design*/
+.grid-container{
+  display: grid;
+  grid-template-areas:
+  'header'
+  'subheader'
+  'main'
+  'footer';
+  grid-template-columns: 1fr;
+  grid-template-rows: 5rem 3rem 1fr 5rem;
+  height:100vh;
+}
+/*header design*/
+header{
+  grid-area:header;
+  background-color: #203040;
+}
+header a{
+  padding:1rem;
+}
+a.brand{
+  color:#ffffff;
+  font-size:2.5rem;
+  font-weight:600;
+}
+.search-box{
+  border: .1rem #ff8000 solid;
+  border-radius:.5rem;
+}
+.search-box input{
+  height:2rem;
+  width:50rem;
+}
+.search-button{
+  background-color: #ff8025;
+  font-size: 1.8rem;
+}
+
+.row{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-between ;
+  align-items: center;
+}
+.row.center {
+  justify-content: center;
+  
+}
+.row.top{
+  align-items:flex-start;
+}
+
+.col-1{
+  flex: 1 1 25rem;
+  align-items: center;
+  justify-content: center;
+  
+}
+.col-2{
+  flex: 2 1 50rem;
+}
+subheader{
+  grid-area:subheader;
+  padding-left:2rem;
+  background-color:#203050;
+}
+subheader a{
+  margin-left:.8rem;
+}
+
+
+main{
+  grid-area:main;
+  padding:1rem;
+}
+img{
+  border-radius:0.5rem;
+}
+img.medium{
+  max-width: 29rem;
+  width: 100%;
+}
+/* card*/
+
+.card{
+  border: 0.1rem #c0c0c0 solid;
+  background-color: #f8f8f8;
+  margin: 1rem;
+  
+}
+.card a{
+  color:#000;
+}
+.card a:hover{
+  color:#ff8000;
+}
+
+.card-body{
+  padding: 1rem;
+}
+.card-body >*{
+  margin-bottom: 0.5rem;
+}
+.product-name{
+  font-weight: bold;
+}
+.rating span{
+  color:#f0c040;
+  margin:0.1rem;
+}
+.price{
+  font-size: 2rem;
+}
+
+
+
+footer{
+  grid-area:footer;
+  background-color: #203050;
+  color:#ffffff;
+}
+.rating span:last-child{
+  color:#404040; 
+}
+
