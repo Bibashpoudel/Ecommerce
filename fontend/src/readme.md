@@ -1,4 +1,5 @@
-Multi-Vendors (Sellers dashboard)
+feature to be added for multi vender website 
+Multi-Vendors (Sellers dashboard) 
 
 As a seller, I can sell my own products Senario:
 
