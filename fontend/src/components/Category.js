@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Rating from './Rating';
 
 
- function Product(props){
+ function Category(props){
     const {product} = props;
     return(
         <div key={product._id} className="card">
@@ -29,4 +29,4 @@ import Rating from './Rating';
     )
 }
 
-export default Product;
+export default Category;

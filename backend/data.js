@@ -1,4 +1,13 @@
 const data = {
+    categories:[
+        {
+            _id:'cat1',
+            name:'vegitable',
+            proid:['1', '3', '4', '5', '6']
+        }
+    ]
+
+    ,
     products:[
         {
             _id:'1',

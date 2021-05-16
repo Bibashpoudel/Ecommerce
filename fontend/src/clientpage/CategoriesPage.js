@@ -11,7 +11,7 @@ import { listProduct } from '../action/productAction';
 
 
 
-function HomePage(){
+function CategoriesPage(){
 
     //defining react hook:
     const dispatch = useDispatch();
@@ -49,4 +49,4 @@ function HomePage(){
     );
 }
 
-export default HomePage;
+export default CategoriesPage;
