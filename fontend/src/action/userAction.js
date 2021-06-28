@@ -8,11 +8,12 @@ export const Signup = (name, phone, password) => async( dispatch) =>{
         payload: {name, phone, password}
     });
     try {
-        const {data} = await axios.post('/api/register', {name, phone, password})
+        const {data} = await axios.post('/api/user/register', {name, phone, password})
         dispatch({
             type:USER_REGISTER_SUCCESS,
             payload:data
         })
+        dispatch({ type: USER_SIGNIN_SUCCESS, payload: data });
         localStorage.setItem('userInfo', JSON.stringify(data));
         
     } catch (error) {
@@ -33,11 +34,12 @@ export const Signin = (phone, password) => async(dispatch) =>{
         payload:{phone, password}
     })
     try {
-        const {data} = await axios.post('/api/signin', {phone, password})
+        const {data} = await axios.post('/api/user/signin', {phone, password})
         dispatch({
             type:USER_SIGNIN_SUCCESS,
             payload:data
         });
+        dispatch({ type: USER_SIGNIN_SUCCESS, payload: data });
         localStorage.setItem('userInfo', JSON.stringify(data));
     } catch (error) {
         dispatch({
@@ -46,12 +48,9 @@ export const Signin = (phone, password) => async(dispatch) =>{
                 error.response && error.response.data.message
                     ? error.response.data.message
                     : error.message
-        })
-        
+        })   
     }
-
 }
-
 export const signout = () => (dispatch)=>{
     localStorage.removeItem('userInfo');
     localStorage.removeItem('cartItems');

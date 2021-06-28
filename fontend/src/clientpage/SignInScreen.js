@@ -53,7 +53,7 @@ function SiginInPage(props){
                 </div>
                 
                 <div className="">
-                    <label htmlfor="phone"> Phone</label>
+                    <label htmlFor="phone"> Phone</label>
                     <input 
                         type="text" 
                         id="phone" 
@@ -63,7 +63,7 @@ function SiginInPage(props){
                     ></input>
                 </div>
                 <div>
-                    <label htmlfor="Password"> Password</label>
+                    <label htmlFor="Password"> Password</label>
                     <input 
                         type="password"
                         id="password" 

@@ -88,7 +88,6 @@ function ProductPage(props){
                                 <div className="row">
                                     <div>status:</div>
                                     <div >
-                                        
                                         {
                                         product.countInStock > 0 ?(
                                             <span className="success"> In stock</span>
@@ -110,10 +109,8 @@ function ProductPage(props){
                                                             <option key={x+1} value={x+1}>{x+1}</option>
                                                         ))
                                                     }
-
                                                  </select>
                                              </div>
-
                                         </div>
                                     </li>
                                 )

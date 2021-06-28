@@ -27,6 +27,7 @@ function RegisterPage(props){
     useEffect(() =>{
         if(userInfo){
             props.history.push(redirect);
+            
         }
 
     }, [props.history, redirect, userInfo]);
@@ -34,8 +35,6 @@ function RegisterPage(props){
 
     return(
         <div>
-            
-          
             <form className="form" onSubmit={registerHandaler}>
                 <div>
                 <h2> Create A account</h2>
@@ -49,7 +48,7 @@ function RegisterPage(props){
                     }
                 </div>
                 <div className="">
-                    <label htmlfor="Name"> Name</label>
+                    <label htmlFor="Name"> Name</label>
                     <input 
                         type="text" 
                         id="name" 
@@ -59,7 +58,7 @@ function RegisterPage(props){
                     ></input>
                 </div>
                 <div className="">
-                    <label htmlfor="phone">  Phone</label>
+                    <label htmlFor="phone">  Phone</label>
                     <input 
                         type="text" 
                         id="phone" 
@@ -69,7 +68,7 @@ function RegisterPage(props){
                     ></input>
                 </div>
                 <div>
-                    <label htmlfor="Password"> Password</label>
+                    <label htmlFor="Password"> Password</label>
                     <input 
                         type="password"
                         id="password" 

@@ -4,8 +4,8 @@ import bcrypt from 'bcryptjs'
 
 // import db from '../database/connection.js'
 
-import SubCategory from '../model/subCategory.js'
-import Category from '../model/Category.js';
+import SubCategory from '../../model/ProductModel/subCategory.js'
+import Category from '../../model/ProductModel/Category.js';
 
 
 const SubcatRouter = express.Router();
@@ -30,11 +30,7 @@ SubcatRouter.get('/all', async(req,res)=>{
 SubcatRouter.post('/add', async(req, res)=>{
     
     const category = await Category.findOne({where:{ cat_name: req.body.cat_name}})
-
-    
-    
-
-    const subcategory = await SubCategory.findOne({where:{ sub_cat_name: req.body.sub_cat_name}})
+    //const subcategory = await SubCategory.findOne({where:{ sub_cat_name: req.body.sub_cat_name}})
        
     if(category){
         const catid = category.id

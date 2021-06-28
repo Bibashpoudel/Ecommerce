@@ -4,7 +4,7 @@ import bcrypt from 'bcryptjs'
 
 // import db from '../database/connection.js'
 
-import Product from '../model/Product.js'
+import Product from '../../model/ProductModel/Product.js'
 
 
 const productRouter = express.Router();

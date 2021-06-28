@@ -5,12 +5,12 @@ import dotenv from 'dotenv'
 
 
 
-import UserRouter from './Routers/userRouter.js'
+import UserRouter from './Routers/UserRouter/ClientRouter/userRouter.js'
 import db from './database/connection.js';
-import productRouter from './Routers/ProductRouter.js';
-import CatRouter from './Routers/categoryRouter.js';
+import productRouter from './Routers/ProductRouter/ProductRouter.js';
+import CatRouter from './Routers/ProductRouter/categoryRouter.js';
 
-import SubcatRouter from './Routers/subcategoryRouter.js';
+import SubcatRouter from './Routers/ProductRouter/subcategoryRouter.js';
 
 dotenv.config()
 
@@ -31,13 +31,13 @@ app.use(bodyParser.urlencoded({extended:true}));
 //   }, function (err) {
 //     console.log('Unable to connect to the database:', err);
 //   });
-// db.sequelize.sync()
-// db.sequelize.sync({ force: true }).then(() => {
-//     console.log("Drop and re-sync db.");
-//   });
+    db.sequelize.sync()
+db.sequelize.sync({ force: true }).then(() => {
+    console.log("Drop and re-sync db.");
+  });
 
 
-app.use('/api', UserRouter);
+app.use('/api/user', UserRouter);
 app.use('/api/category', CatRouter);
 app.use('/api/subcategory', SubcatRouter);
 app.use('/api/product',productRouter);

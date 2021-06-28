@@ -1,7 +1,7 @@
 import Sequelize from 'sequelize'
 
 const sequelize = new Sequelize(
-    "bibash",  ///database name
+    "ecommerce",  ///database name
     'root',     //database username
     'root',     //database Password
     { 

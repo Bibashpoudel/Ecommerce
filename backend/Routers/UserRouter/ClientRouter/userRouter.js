@@ -4,11 +4,9 @@ import bcrypt from 'bcryptjs'
 
 // import db from '../database/connection.js'
 
-import User from '../model/User.js'
-import { generateToken } from '../utils.js';
-
+import User from '../../../model/UserModel/ClientModel/User.js'
+import { generateToken } from '../../../utils.js';
 const userRouter = express.Router();
-
 
 userRouter.get('/all', async(req,res)=>{
 
@@ -27,7 +25,6 @@ userRouter.get('/all', async(req,res)=>{
             "bibash poudel"
         });
     }
-
 
 })
 userRouter.post('/register', async(req,res)=>{
@@ -79,6 +76,27 @@ userRouter.post('/register', async(req,res)=>{
 })
 
 userRouter.post('/signin', async(req, res)=>{
+    const user = await User.findOne({where: {phone:req.body.phone}})
+
+    if (user){
+       if(bcrypt.compareSync(req.body.password, user.password)){
+           res.send({
+               id:user.id,
+               name:user.name,
+               phone:user.phone,
+               token:generateToken(user),
+           });
+           return;
+       }
+       else{
+        res.status(401).send({message:"Incorrect password "})
+       }
+    }
+    else{
+        res.status(401).send({message:"invalid username "})
+    }
+} )
+userRouter.post('/shippingaddress', async(req, res)=>{
     const user = await User.findOne({where: {phone:req.body.phone}})
 
     if (user){

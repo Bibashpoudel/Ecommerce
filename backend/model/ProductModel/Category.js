@@ -1,6 +1,6 @@
 import Sequelize from'sequelize'
 
-import db from '../database/connection.js'
+import db from '../../database/connection.js'
 
 
 
@@ -24,15 +24,6 @@ const Category = db.sequelize.define('category',{
     }
 });
 
-// Category.associate = model =>{
-//     Category.hasMany(model.Product,{
-//         onDelete: "Cascade"
-//     })
-// }
-// Category.associate = model =>{
-//     Category.hasMany(model.Sub_Category,{
-//         onDelete: "Cascade"
-//     })
-// }
+
 
 export default Category;

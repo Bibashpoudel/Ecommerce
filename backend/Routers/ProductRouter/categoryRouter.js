@@ -4,7 +4,7 @@ import bcrypt from 'bcryptjs'
 
 // import db from '../database/connection.js'
 
-import Category from '../model/Category.js'
+import Category from '../../model/ProductModel/Category.js'
 
 
 const CatRouter = express.Router();
